@@ -6,7 +6,5 @@ router.get('/',function(req,res){
 });
 
 require('./AuthRoutes')(router);
-// require('./CustomerRoutes')(router);
-// require('./BeauticianRoutes')(router);
 
 module.exports.router=router;

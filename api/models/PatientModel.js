@@ -14,33 +14,32 @@ var UserSchema = new Schema({
         required:[true,'Name field is required!'],
         maxlength:100
     },
+    address:{
+        type:String,
+        required:[true,'Address field is required!'],
+        maxlength:150
+    },
+    nic:{
+        type:String,
+        required:[true,'NIC field is required!'],
+        maxlength:20
+    },
+    // dob:{
+    //     type:Date
+    // },
+    phone_number:{
+        type:String,
+        required:false
+    },
     email:{
         type:String,
         required:[true,'Email field is required'],
-        unique:true
-    },
-    username:{
-        type:String,
-        required:[true,'Username field is required!'],
         unique:true
     },
     password:{
         type:String,
         minlength:5,
         required:[true,'Password field is required!']
-    },
-    role:{
-        type:String,
-        enum:UseRole,
-        default:UseRole.CUSTOMER
-    },
-    profile_image:{
-        type:String,
-        required:false
-    },
-    phone_number:{
-        type:String,
-        required:false
     },
     create_date:{
         type:Date, 
